@@ -1,0 +1,165 @@
+@use 'colors.scss' as *;
+@use 'root.scss';
+
+.containerCards {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap:3rem;
+    padding-top:10px;
+
+    .smallerC {
+        background-color: $white-dark;
+        width: 282px;
+        height: 285px;
+        padding: 1px 1px 2px 1px;
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+
+        .sCard {
+            width: calc(100% - 2px);
+            height: calc(100% - 5px);
+            border-radius: 24px;
+            background-color: $card-background;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .sLogo {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                #icona1 {
+                    fill: $title-important-color;
+                }
+            }
+
+            .stext {
+                margin-top: 64px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+               #firsth2 {
+                   height: 44px;
+                   font-family: "kanit SemiBold";
+                   color: $title-color;
+                   font-size: 40px;
+               }
+
+               #secondh2 {
+                   height: 44px;
+                   font-family: "kanit SemiBold";
+                   color: $title-important-color;
+                   font-size: 40px;
+                   margin-bottom: 24px;
+               }
+
+               .parag {
+                   font-family: "Kanit Regular";
+                   color: $text-color;
+                   font-size: 16px;
+                }
+            }
+        }
+    }
+    
+    .biggerC {
+        width: 291px;
+        height: 366px;
+        padding: 1px 1px 4px 1px;
+        background-color: $color-5;
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+
+        .bCard {
+            width: calc(100% - 2px);
+            height: calc(100% - 5px);
+            background: linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%);
+            padding: 24px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .bLogo {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .bText {
+                display: flex;
+                flex-direction: column;
+
+                .Littletitle {
+                    height: 24px;
+                    color: $title-color;
+                    font-family: "kanit SemiBold";
+                    font-size: 16px;
+                }
+
+                #BCh2 {
+                    height: 35px;
+                    color: $title-color;
+                    font-family: "kanit SemiBold";
+                    font-size: 32px;
+                    margin: 8px 0;
+                }
+
+                .Littletitle2 {
+                    height: 24px;
+                    color: $title-color;
+                    font-family: "kanit SemiBold";
+                    font-size: 16px;
+                    margin-bottom: 24px;
+                }  
+                
+                .paraghBC {
+                    height: 48px;
+                    color: $title-color;
+                    font-family: "kanit Regular";
+                    font-size: 16px;
+                    margin-bottom: 40px;
+                }
+            }
+
+            #btnBcard {
+                position: relative;
+                -webkit-box-align: center;
+                align-items: center;
+                border: 0px;
+                border-radius: 16px;
+                box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+                display: inline-flex;
+                font-family: "Kanit Semibold";
+                font-size: 16px;
+                font-weight: 600;
+                -webkit-box-pack: center;
+                justify-content: center;
+                height: 48px;
+                padding: 0px 24px;
+                background-color: $buttons-color;
+                color: $white-light;
+                width: 100%;                
+
+                .arrow {
+                    fill: $white-light;
+                }
+                
+            }
+        }
+    }
+}
+        
+        
+

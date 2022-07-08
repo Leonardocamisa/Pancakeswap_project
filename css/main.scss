@@ -1,0 +1,54 @@
+// Collegare qui dentro i singoli moduli riferiti alle section della homepage
+@use '../assets/ds/css/style.scss'; //Collegamento al file scss del ds
+@use '_stats.scss';
+
+body{
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section-nav{
+        width: 100%;
+        height: auto;
+    }
+    main{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .section-banner, .section-stats, .section-trade, .section-earn, .section-prizes, .section-cake, .section-wallet{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media screen and (min-width: 1200px){
+                .section-1200{
+                    max-width: 1200px;
+                    width: 100%;
+                    padding: 48px 24px;
+                }
+                .section-968{
+                    max-width: 968px;
+                    width: 100%;
+                    padding: 48px 24px;
+                }
+            }
+            @media screen and (max-width: 967px){
+                .section-1200, .section-968{
+                    width: 100%;
+                    padding: 32px 24px;
+                }
+            }
+            @media screen and (max-width: 570px){
+                .section-1200, .section-968{
+                    width: 100%;
+                    padding: 16px 24px;
+                }
+            }
+        }
+    }
+}

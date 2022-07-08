@@ -1,0 +1,59 @@
+@use 'colors';
+@use 'root';
+
+/* STRUTTURA PAGINA DS */
+
+body {
+    height: 100vh;
+}
+
+.typographyContainer {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.typographyTitle {
+    .typographySpan {
+        font-size: 16px;
+    }
+}
+
+.typographySpan {
+    font-family: Kanit Regular;
+    font-size: 14px;
+    color: colors.$color-1-dark;
+}
+
+/* STILI HEADER E PARAGRAPH */
+
+h1 {
+    font-size: 64px;
+    font-family: Kanit Bold;
+    color: colors.$color-1-light;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: Kanit Bold;
+    color: colors.$color-1-light;
+}
+
+h3 {
+    font-size: 24px;
+    font-family: Kanit Bold;
+    color: colors.$color-1-light;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: Kanit Bold;
+    color: colors.$color-1-light;
+}
+
+p {
+    font-size: 16px;
+    font-family: Kanit Regular;
+    color: colors.$color-1-light;
+}

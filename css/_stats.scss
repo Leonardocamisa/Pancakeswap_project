@@ -1,0 +1,227 @@
+@use "../assets/ds/css/colors" as *;
+@use './mediaquerry' as *;
+
+
+.section-stats {
+    .containerStatsSection {
+        background: linear-gradient(rgb(255, 255, 255) 22%, rgb(215, 202, 236) 100%);
+        padding: 48px 0px;
+        width: 100%;
+        height: auto;
+        padding: 48px 0;
+        .statsWrap {
+            width: 100%;
+            height: calc(100% - 96px);
+            padding: 48px 24px;
+            .firstFlex {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .icon_rabbit {
+                    width: 48px;
+                    height: 48px;
+                    margin-bottom: 24px;
+                }
+                .header_1 {
+                    color: $title-color;
+                    font-family: "kanit SemiBold";
+                    font-size: 40px;
+                    line-height: 1.1;
+                    @include breakpoint("tablet") {
+                        font-size: 32px;
+                    }
+                }
+                .header_2 {
+                    color: $title-color;
+                    margin-bottom: 32px;
+                    font-family: "kanit SemiBold";
+                    height: 44px;
+                    line-height: 1.1;
+                    font-size: 40px;
+                    @include breakpoint("tablet") {
+                        font-size: 32px;
+                    }
+                }
+                .paragr p {
+                    color: $color-1;
+                    text-align: center;
+                }
+                .p_alone p {
+                    color: $color-1;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    margin: 20px 0 32px 0;
+                    text-align: center;
+                }
+               
+                    .cardsCont {
+                        width: 878px;
+                        height: auto;
+                        display: flex;
+                        flex-direction: row;
+                        gap: 16px;
+                        align-items: center;
+                        @media only screen and (max-width:850px){
+                            flex-direction: column;
+                            gap: 0;
+                        }
+                        .card {
+                            background-color: $white-dark;
+                            width: 282px;
+                            height: 285px;
+                            padding: 1px 1px 2px 1px;
+                            border-radius: 24px;
+                            display: flex;
+                            justify-content: center;
+                            @media only screen and (max-width:850px) {
+                                height: 171px;
+                                display: flex;
+                                justify-content: space-around;
+                            }
+                            @media only screen and (max-width:850px){
+                                margin-bottom: 16px;
+                            }
+                            .sCard {
+                                width: calc(100% - 2px);
+                                height: calc(100% - 3px);
+                                border-radius: 24px;
+                                background-color: $card-background;
+                                padding: 24px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                @media only screen and (max-width:850px) {
+                                    height: 166px;
+                                }
+                                
+                                .sLogo {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: flex-end;
+                                    #icona1 {
+                                        fill: $title-important-color;
+                                    }
+//quì colori diversi per ogni icona
+                                    #scnd_icon {
+                                        fill: $color-2;
+                                    }
+
+                                    #trd_icon {
+                                        fill: $color-4;
+                                    }
+                                }
+                                .stext {
+                                    margin-top: 64px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: flex-end;
+                                    @media only screen and (max-width:850px) {
+                                        margin-top: 0;
+                                    }
+                                    #firsth2 {
+                                    height: 44px;
+                                    font-family: "kanit SemiBold";
+                                    color: $title-color;
+                                    font-size: 40px;
+                                    @include breakpoint("tablet") {
+                                        font-size: 32px;
+                                        line-height: 2.0;
+                                    }
+                                     @media only screen and (max-width:850px){
+                                         line-height: 0;
+                                     }
+                                    }
+                                    #secondh2 {
+                                    height: 44px;
+                                    font-family: "kanit SemiBold";
+                                    color: $title-important-color;
+                                    font-size: 40px;
+                                    margin-bottom: 24px;
+                                    @include breakpoint("tablet") {
+                                        font-size: 32px;
+                                        line-height: 1.0;
+                                        margin-bottom: 0%;
+                                    }
+                                    @media only screen and (max-width:850px){
+                                        line-height: 0;
+                                    }
+                                    }
+//quì colori diversi per ogni "secondo" h2
+                                    #secondh22 {
+                                    height: 44px;
+                                    font-family: "kanit SemiBold";
+                                    color: $color-2;
+                                    font-size: 40px;
+                                    margin-bottom: 24px;
+                                    @include breakpoint("tablet") {
+                                        font-size: 32px;
+                                        line-height: 1.0;
+                                        margin-bottom: 0%;
+                                    }
+                                    @media only screen and (max-width:850px){
+                                        line-height: 0;
+                                    }
+                                    }
+
+                                    #secondh23 {
+                                    height: 44px;
+                                    font-family: "kanit SemiBold";
+                                    color: $color-4;
+                                    font-size: 40px;
+                                    margin-bottom: 24px;
+                                    @include breakpoint("tablet") {
+                                        font-size: 32px;
+                                        line-height: 1.0;
+                                        margin-bottom: 0%;
+                                    }
+                                    @media only screen and (max-width:850px){
+                                        line-height: 0;
+                                    }
+                                    }
+
+                                    .parag {
+                                    font-family: "Kanit Regular";
+                                    color: $text-color;
+                                    font-size: 16px;
+                                    }
+                                    @media only screen and (max-width:850px){
+                                         line-height: 0;
+                                    }
+                                        
+                                }
+                               
+                            }  
+                        }                        
+                    }
+                }
+            }
+        }
+}
+
+//     @include breakpoint("tablet") {
+//     .header_1 {
+//         font-size: 32px;
+//     }}
+//     .header_2 {
+//         font-size: 32px;
+//     }
+//     .cardsCont {
+//         width: 100%;
+//         flex-direction: column;
+//     }
+// } 
+
+// @include breakpoint("mobile") {
+//     .header_1 {
+//         font-size: 32px;
+//     }
+    
+  
+// }
+   
+
+
+ 

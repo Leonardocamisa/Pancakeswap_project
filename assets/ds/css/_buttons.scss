@@ -1,0 +1,107 @@
+// @use 'colors.scss';
+@use 'colors.scss' as *;
+@use 'root.scss';
+
+
+.btn-container-general {
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:50px;
+    width:80%;
+    gap:30px;
+}
+
+
+
+@mixin btn ($height-btn, $radius-btn){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: $radius-btn;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    font-family: Kanit Regular;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: $height-btn;
+    padding:1rem;
+    background-color: $buttons-color;
+    color: $text-button-color;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+
+        p.btn {
+            color:$white;
+        }
+}
+
+
+.btn-01 {
+    @include btn (30px, 15px);
+}
+
+.btn-02 {
+    @include btn (50px, 15px);
+        svg {
+            fill:$white-light;
+            margin-left:0.5rem;
+        }
+}
+
+.btn-03 {
+    @include btn (50px, 15px);
+}
+
+.btn-04 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $buttons-color;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: Kanit Regular;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 50px;
+    padding:1rem;
+    background-color: transparent;
+    color:$buttons-color;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+    p.btn {
+        color:$color-2;
+    }
+}
+
+.btn-settings {
+    @include btn (30px, 15px);
+    background-color: $white;
+    box-shadow: none;
+    color:$color-2;
+    p.btn {
+        color:$color-2;
+    }
+}
+
+
+
+
+

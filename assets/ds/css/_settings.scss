@@ -1,0 +1,236 @@
+@use '_colors.scss' as *;
+@use '_root.scss';
+
+.question-mark-icon {
+    width: 16px;
+    height: 16px;
+    margin-bottom:10px;
+}
+.container-positioner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-settings {
+        height: 100vh;
+        width: 420px;
+        /*  width: auto;
+        max-width: 420px;
+        min-width: 320px;
+        z-index: 100; */
+        overflow: hidden;
+        background-color: $white-light;
+        border-radius: 32px;
+        border: 1px solid rgb(231, 227, 235);
+        display: flex;
+        flex-direction: column;
+        vertical-align: baseline;
+
+        .greybar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: $settings-card-title-bg;
+            border-bottom: 1px solid rgb(231, 227, 235);
+            padding: 12px 24px;
+            font-size: 20px;
+            height: 72px;
+            align-items: center;
+            font-family: Kanit SemiBold;
+            color: $color-1-dark;
+        }
+
+        .whitecontainer {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .padded-white-container {
+            display: flex;
+            flex-direction: column;
+
+            .settings-global {
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 24px;
+
+                .settings-subtitle {
+                    margin-bottom: 24px;
+                    font-weight: 600;
+                    color: $color-1-light;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    text-transform: uppercase;
+                    font-family: Kanit Regular;
+                }
+
+                .settings-bar {
+                    display: flex;
+                    flex-direction: row;
+                    font-family: Kanit Regular;
+                    font-size: 16px;
+                    color: $color-1-dark;
+
+                    &:nth-child(2) {
+                        justify-content: space-between;
+                    }
+
+                    &:nth-child(3) {
+                        margin-bottom: 12px;
+                        gap: 4px;
+                    }
+
+                    .settings-bar-text {
+                        margin-bottom: 0px;
+                    }
+
+                }
+
+                .settings-choice {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap:2px;
+                    .btn-01 , .btn-settings{
+                        font-family: Kanit Regular;
+                    }
+
+                }
+            }
+
+            .swaps-and-liquidity {
+                padding-top: 24px;
+                border-top: 1px solid rgb(231, 227, 235);
+                display:flex; 
+                flex-direction: column;
+
+                .settings-subtitle {
+                    margin-bottom: 24px;
+                    font-weight: 600;
+                    color: $color-1-light;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    text-transform: uppercase;
+                    font-family: Kanit Regular;
+                }
+
+                .settings-bar {
+                    display: flex;
+                    flex-direction: row;
+                    font-family: Kanit Regular;
+                    font-size: 16px;
+                    color: $color-1-dark;
+                    gap:4px;
+                    margin-bottom:12px;
+                }
+                .settings-choice {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom:24px;
+                    gap: 4px;
+                    .btn-01 , .btn-settings{
+                        font-family: Kanit Regular;
+                    }
+                    .settings-percentage-symble {
+                        font-family: Kanit Bold;
+                        color: $color-2-light;
+                        padding-top: 3px;
+                       
+                    }
+
+                    
+
+
+                    .type-button {
+                        width: 76px;
+                        height: 33px;
+                        display: inline-block;
+                        border-radius:33px;
+                        border: 1px solid $color-4;
+                        text-align: center;
+                        justify-content: center;
+                        background-color: $b-ToggleSwitch-light-bg;
+                        .type-button-text {
+                            justify-content: center;
+                            color: $color-1-dark;
+                            width: 74px;
+                            .input-text {
+                                width:100%;
+                                border: 0px;
+                                background-color: $b-ToggleSwitch-light-bg;
+                                color: $color-1-dark;
+                                font-family: Kanit Regular;
+                                font-size: 16px;
+                                border-radius: 16px;
+                                height: 31px;
+                                padding: 0px 16px 0px 16px;
+                                
+                            }
+                            .input-text:focus{
+                                outline: 4px solid $color-1-light;
+                              }
+                            
+
+                        }
+                    }
+
+                }
+
+            }
+            .settings-buttons-menu {
+                display: flex;
+                flex-direction: column;
+                gap:24px;
+                .settings-bar {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    font-family: Kanit Regular;
+                    font-size: 16px;
+                    color: $color-1-dark;
+                    
+                    .settings-bar-text-and-question-icon {
+                        display: flex;
+                        flex-direction: row;
+                        gap:4px;
+                        align-items: center;
+                    }
+                    .type-button {
+                        width: 52px;
+                        height: 33px;
+                        display: inline-block;
+                        border-radius:33px;
+                        border: 1px solid $color-4;
+                        text-align: center;
+                        justify-content: center;
+                        background-color: $b-ToggleSwitch-light-bg;
+                        .type-button-text {
+                            justify-content: center;
+                            color: $color-1-dark;
+                            .input-text {
+                                width:100%;
+                                border: 0px;
+                                background-color: $b-ToggleSwitch-light-bg;
+                                color: $color-1-dark;
+                                font-family: Kanit Regular;
+                                font-size: 16px;
+                                border-radius: 33px;
+                                height: 31px;
+                                padding: 0px 16px 0px 16px;
+                                
+                            }
+                            .input-text:focus{
+                                outline: 4px solid $color-1-light;
+                              }
+                            
+
+                        }
+                    }
+                
+                }
+            }
+        }
+    }
+}

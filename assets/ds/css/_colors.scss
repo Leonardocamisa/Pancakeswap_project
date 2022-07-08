@@ -1,0 +1,65 @@
+/* Colors Var */
+$color-1: #7a6eaa;
+$color-1-light: #7645d9;
+$color-1-dark: #280d5f;
+
+$color-2: #1fc7d4;
+$color-2-light: #6cdae2;
+$color-2-dark: #187d91;
+
+$color-3: #d1884f;
+$color-3-light: #fedc90;
+$color-3-dark: #633001;
+
+$color-4: #ed4b9e;
+$color-5: #ffb237;
+$color-6: #ffe568;
+
+$white-light: #ffffff;
+$white: #eff4f5;
+$white-dark: #e7e3eb;
+
+$black-1: #000000;
+$black-2: #383241;
+$black-3: #27262c;
+
+/*Background colors*/
+
+$prediction-bg-color: rgba(0, 0, 0, 0) linear-gradient(rgb(255, 178, 55) 0%, rgb(255, 205, 81) 51.17%, rgb(255, 231, 106) 100%) repeat scroll 0% 0%;
+$lottery-bg-color: rgba(0, 0, 0, 0) linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%) repeat scroll 0% 0%;
+
+
+/*Text Var*/
+$text-color: #7a6eaa;
+$title-color: #280d5f;
+$title-important-color: #7645d9;
+$text-button-color: #ffffff;
+$link-text-color: #1fc7d4;
+
+/*Components var*/
+$buttons-color: #1fc7d4;
+$card-background: #ffffff;
+$icons-color: #7a6eaa;
+$icons-social-color: #b8add2;
+$icons-grey: #9F9C9C;
+
+/*Popup title background colors*/
+$settings-card-title-bg: rgba(0, 0, 0, 0) linear-gradient(111.68deg, rgb(242, 236, 242) 0%, rgb(232, 242, 246) 100%) repeat scroll 0% 0%;
+$connectWallet-card-title-bg: rgba(0, 0, 0, 0) linear-gradient(139.73deg, rgb(229, 253, 255) 0%, rgb(243, 239, 255) 100%) repeat scroll 0% 0%;
+
+
+/*Buttons Toggle Switch colors*/
+$b-ToggleSwitch-active:#31D0AA;
+
+$b-ToggleSwitch-light-bg: #EEEAF4;
+$b-ToggleSwitch-light-ball: #ffffff;
+
+$b-ToggleSwitch-dark-bg: #372F47;
+$b-ToggleSwitch-dark-ball: #27262C;
+
+$b-ToggleSwitch-darkmode-active: #666171;
+
+$b-ToggleSwitch-pancake-bg: #e27c31;
+$b-ToggleSwitch-pancake-shadow: #fbbe7c;
+$b-ToggleSwitch-butter-bg: #fbdb60;
+$b-ToggleSwitch-butter-shadow: #d67823;

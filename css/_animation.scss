@@ -1,0 +1,28 @@
+@mixin floatAnimation ($animationName, $xDir, $yDir, $speed, $delay){
+    animation: $animationName $speed ease-in-out $delay infinite normal none running ;
+    -webkit-animation: $animationName $speed ease-in-out $delay infinite normal none running ;
+
+    @keyframes #{$animationName} {
+        0% {
+            transform: translate(0px, 0px);
+            -webkit-transform: translate(0px, 0px);
+            -moz-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            -o-transform: translate(0px, 0px);
+        }
+        50% {
+            transform: translate($xDir, $yDir);
+            -webkit-transform: translate($xDir, $yDir);
+            -moz-transform: translate($xDir, $yDir);
+            -ms-transform: translate($xDir, $yDir);
+            -o-transform: translate($xDir, $yDir);
+        }
+        100% {
+            transform: translate(0px, 0px);
+            -webkit-transform: translate(0px, 0px);
+            -moz-transform: translate(0px, 0px);
+            -ms-transform: translate(0px, 0px);
+            -o-transform: translate(0px, 0px);
+        }
+    }
+}
