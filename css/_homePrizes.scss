@@ -1,0 +1,173 @@
+@use "../assets/ds/css/colors" as *;
+@use "./animation" as *;
+
+@mixin flx ($flx-direction,$flx-jc,$flx-ai,$flx-gap) {
+    display: flex;
+    flex-direction: $flx-direction;
+    justify-content: $flx-jc;
+    align-items: $flx-ai;
+    gap: $flx-gap
+}
+
+.section-prizes{
+    width: 100%;
+    min-height: 200px;
+    background: rgba(0, 0, 0, 0) linear-gradient(rgb(111, 182, 241) 0%, rgb(234, 242, 246) 100%) repeat scroll 0% 0%;
+    @include flx(row,center,center,0);
+    position: relative;
+    overflow: hidden;
+
+    .prizes-img-positioner{
+        position: absolute;
+        width: 512px;
+        height: 521px;
+        @media screen and (max-width: 850px) {
+            width: 192px;
+            height: 192px;
+        }
+        &:nth-child(1){
+            left: 0;
+            bottom: -64px;
+        }
+        &:nth-child(2){
+            right: -10px;
+            top: -64px;
+        }
+        .prizes-img-container{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .prizes-img{
+                position: absolute;
+                &:nth-child(1){
+                    @include floatAnimation(prizesAnimation,-10px, -20px, 3s, 1s);
+                }
+                &:nth-child(2){
+                    @include floatAnimation(prizesAnimation,-10px, -20px, 3s, 0.66s);
+                }
+                &:nth-child(3){
+                    @include floatAnimation(prizesAnimation,-10px, -20px, 3s, 0.33s);
+                }
+                &:nth-child(4){
+                    @include floatAnimation(prizesAnimation,-10px, -20px, 3s, 0s);
+                }
+                &:nth-child(5){
+                    @include floatAnimation(prizesAnimation,-10px, -20px, 3s, 0s);
+                }
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+
+    .center-prizes{
+        position: relative;
+        min-width: 100px;
+        min-height: 100px;
+        padding: 40px;
+        margin: 48px 0px;
+        background: rgba(255, 255, 255, 0.6) none repeat scroll 0% 0%;
+        border-radius: 72px;
+        -webkit-border-radius: 72px;
+        -moz-border-radius: 72px;
+        -ms-border-radius: 72px;
+        -o-border-radius: 72px;
+        @include flx(column,center,center,10px);
+
+        .prizes-description-container{
+            @include flx(column,center,center,24px);
+            .prizes-title-container{
+                text-align: center;
+                .hStyle{
+                    h2{
+                        font-family: "Kanit SemiBold";
+                        font-weight: 600;
+                        span{
+                            color: $title-color;
+                            font-size: 40px;
+                            font-family: "Kanit SemiBold";
+                        }
+                    }
+                }
+            }
+            .prizes-text-container{
+                @include flx(column, center, center,0);
+                .prizes-text{
+                    span{
+                        color: $text-color;
+                        font-size: 16px;
+                        font-family: "Kanit Regular";
+                    }
+                }
+            }
+        }
+
+        .prizes-cards-container{
+            margin-top: 30px;
+
+            @media screen and (min-width: 850px) {
+                @include flx(row,center,center,20px);
+            }
+            @include flx(column,center,center,20px);
+            .containerCards{
+                width: auto;
+                .biggerC{
+                    .bText{
+                        h2{
+                            height: auto;
+                            margin: 0;
+                            font-size: 40px;
+                            color: $color-1-dark;
+                            font-weight: 60;
+                            font-family: "Kanit SemiBold";
+                        }
+                    }
+                }
+                @media screen and (min-width: 850px){
+                &:first-of-type{
+                    transform: rotate(-1.43deg);
+                    -webkit-transform: rotate(-1.43deg);
+                    -moz-transform: rotate(-1.43deg);
+                    -ms-transform: rotate(-1.43deg);
+                    -o-transform: rotate(-1.43deg);
+                }
+                &:last-of-type{
+                    transform: rotate(1.43deg);
+                    -webkit-transform: rotate(1.43deg);
+                    -moz-transform: rotate(1.43deg);
+                    -ms-transform: rotate(1.43deg);
+                    -o-transform: rotate(1.43deg);
+                    }
+                }
+                &:last-of-type{
+                    .biggerC{
+                        background-color: #3c1786;
+                        .bCard{
+                            background: rgba(0, 0, 0, 0) linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%) repeat scroll 0% 0%;
+                            .bLogo{
+                                .containerIcons{
+                                    .icons.lottery{
+                                        fill: $white;
+                                    }
+                                }
+                            }
+                            .bText{
+                                .Littletitle, .Littletitle2, .paraghBC{
+                                    color: $white;
+                                }
+                                h2{
+                                    background: -webkit-linear-gradient(rgb(255, 216, 0),rgb(253, 171, 50));
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

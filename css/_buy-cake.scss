@@ -1,0 +1,289 @@
+@use "../assets/ds/css/colors" as *;
+@use "animation.scss" as *;
+.buy-cake-and-starts-in-seconds {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+  .buy-cake-container {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    background-color: color rgba(250, 249, 250);
+    padding: 48px 0px;
+    width: 100%;
+    .small-buy-cake-container {
+      width: 100%;
+      max-width: 968px;
+      margin: 0px;
+      .buy-cake-text-and-svg {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .small-buy-cake-text-and-svg {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          @media screen and (max-width: 688px) {
+            flex-direction: column-reverse;
+          }
+
+          .buy-cake-text {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            flex: 1 1 0%;
+            margin-right: 64px;
+            width: 50%;
+            @media screen and (max-width:688px) {
+              width: 100%;
+              padding-top:90px;
+              margin:auto;
+              
+            }
+            .buy-cake-h2-text {
+              width: 100%;
+              h2 {
+                font-size: 40px;
+                font-family: Kanit Bold;
+                color: $black-1;
+                line-height: 1.1;
+                margin-bottom: 24px;
+              }
+              span {
+                font-size: 40px;
+                font-family: Kanit Bold;
+              }
+            }
+            .buy-cake-p-text {
+              font-size: 16px;
+              font-family: Kanit Regular;
+              color: rgb(122, 110, 170);
+              margin-bottom: 24px;
+            }
+            .buy-cake-buttons {
+              display: flex;
+              flex-direction: row;
+              gap: 16px;
+              justify-content: start;
+              width: 40%;
+              align-items: center;
+              @media screen and (max-width:688px) {
+                width:60%;
+                
+              }
+              p {
+                cursor: pointer;
+                color: $link-text-color;
+                font-family: Kanit SemiBold;
+                a:hover {
+                  text-decoration: $link-text-color underline;
+                }
+              }
+            }
+          }
+          .buy-cake-svg {
+            width: 50%;
+            position: relative;
+            flex: 1 1 0%;
+            box-sizing: border-box;
+            @media screen and (max-width: 688px) {
+              width: 100%;
+              height:200px;
+            }
+            img {
+              position: absolute;
+              top: -50px;
+              left: 0px;
+              width: 90%;
+              @media screen and (max-width:688px) {
+                left: 140px;
+                top:-120px;
+                width:220px;
+              }
+              &:nth-child(1) {
+                @include floatAnimation(float1, 10px, 15px, 3s, 0.66s);
+              }
+              &:nth-child(2) {
+                @include floatAnimation(float2, 8px, 20px, 3s, 1s);
+              }
+              &:nth-child(3) {
+                @include floatAnimation(float3, 11px, 10px, 3s, 0.33s);
+              }
+              &:nth-child(4) {
+                @include floatAnimation(float4, 10px, 15px, 3s, 0s);
+              }
+            }
+          }
+        }
+      }
+      .buy-cake-numbers-stats {
+        display: flex;
+        flex-direction: column;
+        margin-top: 84px;
+        gap: 30px;
+        @media screen and (max-width:688px) {
+          flex-direction: row;
+          gap:0px;
+        }
+        .buy-cake-numbers-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: flex-start; 
+            
+            @media screen and (max-width:688px) {
+              flex-direction: column;
+              width: 100%;
+            }
+            &:nth-child(2) {
+              .buy-cake-numbers-square {
+                @media screen and (max-width:688px) {
+                  border-left: $white-dark 1px solid;
+                  padding-left:16px;
+                }
+              }
+            }
+
+            .buy-cake-numbers-square{
+                width: 33.3%;
+                display: flex;
+                flex-direction: column;
+                gap:2px;
+                @media screen and (max-width: 688px) {
+                  width:100%;
+                  margin-bottom:15px;
+                }
+                &:nth-child(2) {
+                    @media screen and (min-width:689px) {
+                      border-left: $white-dark 1px solid;
+                    padding-left: 16px;
+                    }
+                    
+                }
+                &:nth-child(3) {
+                    @media screen and (min-width:689px) {
+                      border-left: $white-dark 1px solid;
+                    padding-left: 16px;
+                    }
+                }
+                p{
+                    color:rgb(122 110 170);
+                }
+                h3 {
+                    color: $color-1-dark;
+                }
+            }
+        }
+      }
+    }
+  }
+}
+
+.section-wallet {
+  background: purple url("../img/Background-purple.png") no-repeat center;
+  .container-wallet {
+    width: 100%;
+    .start-in-seconds{
+      display: flex;
+      flex-direction: row;
+      width:100%;
+      height: auto;
+      margin-top:24px;
+      padding-top:48px;
+      padding-bottom:48px;
+      position: relative;
+      @media screen and (max-width:968px){
+        justify-content: center;
+      }
+      .start-in-seconds-svg {
+        width: 20%;
+        position: relative;
+        box-sizing: border-box;
+        @media screen and (max-width: 968px) {
+          display:none;
+        }
+        img {
+          width: 110%;
+          position: absolute;
+          left: -120px;
+          top: -120px;
+          &:nth-child(1) {
+            @include floatAnimation(float-pancake-4, 10px, 15px, 3s, 0.66s);
+          }
+          &:nth-child(2) {
+            @include floatAnimation(float-pancake-5, 11px, 10px, 3s, 0.66s);
+          }
+          &:nth-child(3) {
+            @include floatAnimation(float-pancake-6, 8px, 20px, 3s, 1s);
+        }
+      }
+    }
+      .start-in-seconds-text-container {
+        width: 60%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap:24px;
+        @media screen and (max-width:968px){
+          width:100%;
+        }
+        .start-in-seconds-text {
+          p {
+            color: $white-light;
+          }
+          h2 {
+            color: $white-light;
+          }
+          &:nth-child(3) {
+            p {
+              font-family: Kanit SemiBold;
+              color: $link-text-color;
+              cursor: pointer;
+              a:hover {
+                text-decoration: $link-text-color underline;
+              }
+            }
+          }
+        }
+        button {
+            margin:auto;
+          }
+      }
+      .start-in-seconds-svg2 {
+        width: 20%;
+        position: relative;
+        box-sizing: border-box;
+        @media screen and (max-width: 968px) {
+          display:none;
+        }
+        img {
+          width: 110%;
+          position: absolute;
+          left: 60px;
+          bottom: -90px;
+          &:nth-child(1) {
+            @include floatAnimation(float-pancake2, 8px, 20px, 3s, 1s);
+          }
+          &:nth-child(2) {
+            @include floatAnimation(float-pancake1, 10px, 15px, 3s, 0.66s);
+          }
+          &:nth-child(3) {
+            @include floatAnimation(float-pancake3, 11px, 10px, 3s, 0.33s);
+            top: 60px;
+            right: 25px;
+        }
+      }
+    }
+  }
+  }
+}
+.section-cake {
+  overflow: hidden;
+  @media screen and (max-width: 688px) {
+    padding-top: 50px;    
+  }
+}

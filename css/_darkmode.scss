@@ -1,0 +1,184 @@
+body{
+    &.darkmode{
+        .section-navMobile{
+            background: #27262c;
+            border-top: 1px solid rgb(56, 50, 65);
+        }
+        #hiddenSettings{
+            .container-positioner .container-settings{
+                background-color: #27262c;
+                border: 1px solid rgb(56, 50, 65);
+                .greybar{
+                    background: transparent none repeat scroll 0% 0%;
+                    border-bottom: 1px solid rgb(56, 50, 65);
+                }
+                h4{
+                    color: #f4eeff;
+                }
+                .settings-bar-text p, .settings-bar-text {
+                    color: #f4eeff;
+                }
+                .question-mark-icon .icons{
+                    color: #b8add2;
+                }
+                .swaps-and-liquidity{
+                    border-top: 1px solid #383241;
+                }
+            }
+        }
+
+        #navbar{
+            background-color: rgb(39, 38, 44);
+            border-bottom: 1px solid rgb(56, 50, 65);
+            .pnck{
+                fill: #ffffff;
+            }
+        }
+
+        /* SECTION BANNER */
+        #sectionBanner{
+                background: rgba(0, 0, 0, 0) radial-gradient(103.12% 50%, rgb(33, 25, 58) 0%, rgb(25, 19, 38) 100%) repeat scroll 0% 0%;
+                .container-moon-left{
+                    h1{
+                        color: #9a6aff;
+                    }
+                    h3{
+                        color: #ffffff;
+                    }
+                }
+        }
+
+
+        #bannerSectionSvgStop1{
+            stop-color: #08060B;
+        }
+
+        #bannerSectionSvgStop2{
+            stop-color: #08060B;
+        }
+
+        #bannerSectionSvgStop3{
+            stop-color: #08060B;
+        }
+
+        /* SECTION STATS */
+        #sectionStats{
+            background: rgba(0, 0, 0, 0) linear-gradient(rgb(9, 7, 12) 22%, rgb(32, 19, 53) 100%) repeat scroll 0% 0%;
+            .header_1, .header_2{
+                color: #f4eeff;
+            }
+            .paragr p, .p_alone p{
+                color: rgb(184, 173, 210);
+            }
+            .card{
+                background-color: #383241;
+                .sCard{
+                    background-color: #27262c;
+                    #firsth2{
+                        color: #ffffff;
+                    }
+                    .parag{
+                        color: #b8add2;
+                    }
+                }
+            }
+        }
+
+        /*SECTION TRADE */
+        #sectionTrade {
+                background: rgb(8, 6, 11) none repeat scroll 0% 0%;
+                h2{
+                    color: #ffffff;
+                }
+                p{
+                    color: rgb(184, 173, 210);
+                }
+
+            #tradeSvg{
+                    svg{
+                        fill: rgb(32, 19, 53);
+                    }
+            }
+        }
+
+        /*SECTION EARN */
+        #sectionEarn{
+                background: rgba(0, 0, 0, 0) linear-gradient(166.77deg, rgb(59, 65, 85) 0%, rgb(58, 48, 69) 100%) repeat scroll 0% 0%;
+                h2{
+                    color: #ffffff;
+                }
+                p{
+                    color: rgb(184, 173, 210);
+                }
+                .earnCardNumbers{
+                    color: #ffffff;
+                    span{
+                        color: #ffffff;
+                    }
+                }
+                .earnCardApy{
+                    color: #b8add2;
+                }
+
+            #earnSvg{
+                    svg{
+                        fill: rgb(8, 6, 11);
+                    }
+            }
+        }
+        
+        /*SECTION PRIZES */
+        #sectionPrizes{
+            background: rgba(0, 0, 0, 0) linear-gradient(rgb(11, 69, 118) 0%, rgb(9, 17, 21) 100%) repeat scroll 0% 0%;
+            .center-prizes{
+                background: rgba(8, 6, 11, 0.6) none repeat scroll 0% 0%;
+                h2{
+                    span{
+                        color: #ffffff;
+                    }
+                }
+                .prizes-text{
+                    span{
+                        color: #b8add2;
+                    }
+                }
+            }
+        }
+        
+        /*SECTION CAKE*/
+        #sectionCake{
+            background: rgb(8, 6, 11) none repeat scroll 0% 0%;
+            h2{
+                span{
+                    color: #9a6aff !important;
+                }
+                color: #ffffff;
+            }
+            .buy-cake-p-text{
+                color: #b8add2;
+            }
+            .buy-cake-numbers-text{
+                p{
+                    color:#b8add2;
+                }
+            }
+            .buy-cake-numbers-value{
+                h3{
+                    color: #f4eeff;
+                }
+            }
+        }
+    }
+}
+
+#bannerSectionSvgStop1{
+    stop-color: #ffffff;
+}
+
+#bannerSectionSvgStop2{
+    stop-color: #ffffff;
+}
+
+#bannerSectionSvgStop3{
+    stop-color: #ffffff;
+}

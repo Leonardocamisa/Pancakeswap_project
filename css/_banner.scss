@@ -1,0 +1,575 @@
+@use '../assets/ds/css/colors' as *;
+@use "./animation" as *;
+
+
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+
+@mixin btn ($height-btn, $radius-btn){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: $radius-btn;
+    box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    font-family: Kanit Regular;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: $height-btn;
+    padding:1rem;
+    background-color: $buttons-color;
+    color: $text-button-color;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+
+        p.btn {
+            color:$white;
+        }
+}
+
+
+.btn-02-banner {
+    @include btn (50px, 15px);
+    width:150px;
+        svg {
+            fill:$white-light;
+            margin-left:0.5rem;
+        }
+}
+
+.container-banner {
+    display:flex;
+    flex-direction: column;
+}
+
+.section-banner {
+    position: relative;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 1;
+    background: linear-gradient(139.73deg, rgb(230, 253, 255) 0%, rgb(243, 239, 255) 100%);
+    padding: 48px 0px;
+
+    svg.bg-banner-section {
+        position: absolute;
+        width: 100%;
+        z-index: -10;
+        bottom: 0;
+    }
+
+}
+
+
+.banner-container > * {
+    z-index:10;
+    position:relative;
+    
+}
+
+.banner-padre{
+    height: 200px;
+    position: relative;
+
+}
+
+
+.banner-container {
+    width: 100%;
+    height:200px;
+    position: absolute;
+    //margin-top:280px;
+    border-radius: 32px;
+    padding:24px;
+    background: rgb(60, 23, 134);
+    background: linear-gradient(0deg, rgba(60, 23, 134, 1) 0%, rgba(118, 69, 217, 1) 100%);
+    opacity: 1;
+    transition: opacity 3s ease-in-out ;
+    -webkit-transition: opacity 3s ease-in-out ;
+    -moz-transition: opacity 3s ease-in-out ;
+    -ms-transition: opacity 3s ease-in-out ;
+    -o-transition: opacity 3s ease-in-out ;
+    &.hide{
+        opacity: 0;
+    }
+
+    .left-banner-section {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        // width:30%;
+        // height:100%;
+
+        h3 {
+            color: white;
+            text-shadow: rgb(0 0 0 / 25%) 0px 4px 4px;
+            margin-bottom: 7px;
+        }
+
+        .timer-banner-container {
+            width: 250px;
+            height: 50px;
+            background-color: #280d5f;
+            border-radius: 10px;
+            display: flex;
+            margin-bottom: 10px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #996aff7d;
+
+
+            @media screen and (max-width: 730px){
+                width: 200px;
+                height:40px;
+            }
+            
+
+                .timer-banner {
+                    display:flex;
+                    flex-direction: row;
+                    align-items: baseline;
+                    
+
+                    h2 {
+
+                        margin-right: 5px;
+                        background: -webkit-linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+
+                        @media screen and (max-width: 730px){
+                            font-size: 28px;
+                            
+                        }
+                    }
+            
+                    h4 {
+            
+                        background: -webkit-linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        margin-right: 10px;
+                    }
+                }
+
+        }
+
+    }
+
+    // img {
+    //     width:100%;
+    //     position:absolute;
+    //     // top:0;
+    //     bottom:-3px;
+    //     left:0;
+    //     z-index:0;
+    // }
+
+}
+
+
+.btn-slide-banner {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    // background-color: red;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 108px;
+    bottom: 12px;
+
+    .btn-banner-left {
+        border-radius: 4px 0px 0px 4px;
+        width:54px;
+        height:8px;
+        opacity:0.3;
+        border:none;
+        cursor:pointer;
+    }
+
+    .btn-banner-right {
+        border-radius: 0px 4px 4px 0px;
+        width:54px;
+        height:8px;
+        opacity:0.3;
+        border:none;
+        cursor:pointer;
+        
+    }
+
+    .btn-banner-left-active {
+        border-radius: 4px 0px 0px 4px;
+        width:54px;
+        height:8px;
+        border:none;
+
+        cursor:pointer;
+    }
+
+    .btn-banner-right-active {
+        border-radius: 0px 4px 4px 0px;
+        width:54px;
+        height:8px;
+        border:none;
+        cursor:pointer;
+        
+    }
+}
+
+.container-moon {
+    height:600px;
+    margin-top:50px;
+    display:flex;
+
+        h1 {
+            line-height: 1.1;
+        }
+
+        h3 {
+            margin-top:24px;
+            color:$color-1-dark;
+        }
+
+    .container-moon-left {
+        // width:50%;
+        // display:flex;
+        // flex-direction: column;
+        // justify-content: center;
+
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0%;
+        justify-content: center;
+
+
+         .button-moon-left {
+             display:flex;
+             flex-direction: row;
+             justify-content: flex-start;
+             margin-top:24px;
+             
+             
+             .btn-03 {
+                 margin-right:10px;
+                 width:180px;
+
+                 .btn-connect {
+                     color:$white-light;
+                     font-weight:600;
+                 }
+             }
+
+             .btn-04 {
+                width:140px;
+                
+
+                .btn-trade {
+                    color:$color-2;
+                    font-weight:600;
+                }
+             }
+
+         }
+
+    }
+
+    .container-moon-right {
+        // width:50%;
+        // position:relative;
+        flex: 1 1 0%;
+
+        .cont-img-bunny {
+
+            position:relative;
+
+        img {
+            width: 100%;
+            position: absolute;
+            
+
+            &:nth-child(1) {
+                @include floatAnimation(bunnyAnimation,10px, 10px, 5s, 1s);
+            }
+
+            &:nth-child(2) {
+                animation: 3s ease-in-out 0ms infinite normal none running;
+                display: block;
+
+                -webkit-animation-name: fadeIn;
+                -webkit-animation-duration: 3.5s;
+                animation-name: fadeIn;
+                animation-duration: 3.5s;
+            }
+
+            &:nth-child(3) {
+                animation: 3s ease-in-out 0ms infinite normal none running;
+                display: block;
+
+                -webkit-animation-name: fadeIn;
+                -webkit-animation-duration: 2.5s;
+                animation-name: fadeIn;
+                animation-duration: 2.5s;
+            }
+
+            &:nth-child(4) {
+                animation: 3s ease-in-out 0ms infinite normal none running;
+                
+                
+
+                display: block;
+
+                -webkit-animation-name: fadeIn;
+                -webkit-animation-duration: 3s;
+                animation-name: fadeIn;
+                animation-duration: 3s;
+
+                @keyframes fadeIn{
+                    0% {
+                        opacity: 0.9;
+                    }
+                    
+                    50% {
+                        opacity: 0.1;
+                    }
+                    
+                    100% {
+                        opacity: 0.9;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    }
+
+}
+
+
+
+.yellow-gradient {
+    display:flex;
+    flex-direction: column;
+
+    h3 {
+        margin-right: 5px;
+        background: -webkit-linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+        color: white;
+        text-shadow: rgb(0 0 0 / 25%) 0px 4px 4px;
+        margin-bottom: 7px;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 1200px){
+    .img-01-banner{
+        background-image: url(../img/lottery.png);
+        display:flex;
+        background-size:contain;
+        background-repeat: no-repeat;
+        height:120%;
+        width:100%;
+        position:absolute;
+        // top:0;
+        bottom:-13px;
+        left:0;
+        z-index:0;
+
+    }
+
+    .img-02-banner{
+        background-image: url(../img/perpetual.png);
+        display:flex;
+        background-size:contain;
+        background-repeat: no-repeat;
+        height:120%;
+        width:100%;
+        position:absolute;
+        // top:0;
+        background-position: right;
+        bottom:0;
+        // left:750px;
+        right:0;
+        z-index:0;
+        
+
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 1199px){
+
+
+
+.banner-container {
+    overflow: hidden;
+}
+
+
+
+.yellow-gradient {
+    display:flex;
+    flex-direction: column;
+
+    h3 {
+        margin-right: 5px;
+        background: -webkit-linear-gradient(rgb(255, 216, 0) 0%, rgb(253, 171, 50) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+        color: white;
+        text-shadow: rgb(0 0 0 / 25%) 0px 4px 4px;
+        margin-bottom: 7px;
+        font-size:22px;
+    }
+}
+
+
+
+
+
+.container-moon {
+display: flex;
+flex-direction: column-reverse;
+// align-items: flex-end;
+// -webkit-box-pack: center;
+// justify-content: center;
+
+
+        .container-moon-left{
+            margin-top:150px;
+        }
+
+        .container-moon-right{
+
+            .cont-img-bunny {
+                
+                
+                img {
+                    width:40%;
+                    left:30%;
+
+                }
+            }
+        }
+
+}
+
+
+
+
+    .left-banner-section {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        
+
+        
+    }
+
+    .img-01-banner {
+
+        background-image: url(../img/lotteryMobile.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height:100%;
+        width:100%;
+        position:absolute;
+        background-size:auto;
+        top:0;
+        right:-45%;
+        z-index:0;
+    }
+
+
+
+    .img-02-banner{
+        background-image: url(../img/perpetualMobile.png);
+        display:flex;
+        background-size:contain;
+        background-repeat: no-repeat;
+        height:120%;
+        width:100%;
+        position:absolute;
+        // top:0;
+        bottom:0;
+        // left:730px;
+        left:0;
+        background-position: right;
+        z-index:0;
+
+    }
+    
+}
+
+
+
+@media screen and (max-width: 730px){
+    .img-01-banner {
+
+        background-image: url(../img/lotteryMobile.png);
+        background-repeat: no-repeat;
+        // height:100%;
+        // width:100%;
+        position:absolute;
+        background-size:50%;
+        top:65px;
+        // right:0;
+        left:190px;
+        // bottom:100px;
+        // right:-400px;
+        z-index:0;
+    }
+
+
+    .img-02-banner{
+        background-image: url(../img/perpetualMobile.png);
+        display:flex;
+        background-size:contain;
+        background-repeat: no-repeat;
+        height:120%;
+        width:100%;
+        position:absolute;
+        background-position: right;
+        // top:0;
+        bottom:0;
+        // left:140px;
+        left:0;
+        z-index:0;
+
+    }
+
+    .timer-banner-container {
+        width:200px;
+        color:red;
+        background-color:red;
+    }
+
+
+
+    }

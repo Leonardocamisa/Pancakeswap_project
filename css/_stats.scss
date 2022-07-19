@@ -3,8 +3,9 @@
 
 
 .section-stats {
-    .containerStatsSection {
-        background: linear-gradient(rgb(255, 255, 255) 22%, rgb(215, 202, 236) 100%);
+    background: linear-gradient(rgb(255, 255, 255) 22%, rgb(215, 202, 236) 100%);
+    overflow: hidden;
+    .container-stats{
         padding: 48px 0px;
         width: 100%;
         height: auto;

@@ -1,0 +1,192 @@
+@use '../assets/ds/css/colors';
+@use "./_animation.scss" as *;
+@use "../assets/ds/css/buttons";
+@use './mediaquerry' as *;
+
+.section-trade {
+    background: white;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .tradeSvg{
+        width: 100%;
+        @include breakpoint("tablet") {
+            padding-bottom: 200px;
+        }
+    
+        @include breakpoint("mobile") {
+            padding-bottom: 200px;
+        }
+    }
+}
+
+
+.tradeColumn {
+    display: flex;
+    flex-direction: column;
+
+
+
+    @include breakpoint("tablet") {
+
+        flex-direction: column-reverse;
+
+    }
+
+    @include breakpoint("mobile") {
+
+        flex-direction: column-reverse;
+
+    }
+
+    .tradeRow {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+
+
+        @include breakpoint("tablet") {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include breakpoint("mobile") {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tradeContainer {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 0%;
+            margin-right: 64px;
+            align-self: center;
+            gap: 24px;
+
+
+
+            @include breakpoint("tablet") {
+
+                margin-right: 0px;
+                padding: 20px;
+            }
+
+
+            .tradeHeader {
+
+                h2 {
+                    color: colors.$color-1-dark;
+                    line-height: 1;
+
+                    span {
+                        color: colors.$color-1-light;
+                    }
+                }
+
+            }
+
+            .tradeParagr {
+                p {
+                    color: colors.$text-color;
+                }
+            }
+
+            .tradeButtons {
+                display: flex;
+                flex-direction: row;
+
+                .btn-learn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: colors.$link-text-color;
+                    font-weight: 600;
+                    height: 50px;
+                    padding: 1rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}
+
+.tradePictures {
+    flex: 1 1 0%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+    .tradeToken {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .tradeImage {
+            position: absolute;
+            top: -200px;
+            left: 0px;
+
+
+            @include breakpoint("tablet") {
+                left: calc(100vw - 220px);
+            }
+
+            @include breakpoint("mobile") {
+                left: 50px;
+            }
+
+
+        }
+
+        .bnb {
+            img {
+                height: 428px;
+            }
+            @include floatAnimation (bnbAnimation, -10px, -20px, 3s, 1s);
+
+            @include breakpoint("tablet") {
+                img {
+                    height: 200px;
+                }
+            }
+
+        }
+
+
+
+        .btc {
+            img {
+                height: 428px;
+            }
+            @include floatAnimation (btcAnimation, -10px, -20px, 3s, 0.66s);
+
+            @include breakpoint("tablet") {
+                img {
+                    height: 200px;
+                }
+            }
+        }
+
+        .cake {
+            img {
+                height: 428px;
+            }
+            @include floatAnimation (cakeAnimation, -10px, -20px, 3s, 0.33s);
+
+            @include breakpoint("tablet") {
+                img {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}

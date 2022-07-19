@@ -1,8 +1,20 @@
 // Collegare qui dentro i singoli moduli riferiti alle section della homepage
 @use '../assets/ds/css/style.scss'; //Collegamento al file scss del ds
+@use '../css/navbar.scss';
+@use './footer.scss';
+@use '../assets/ds/css/colors' as *;
+@use '_buy-cake.scss';
+@use '_animation.scss';
 @use '_stats.scss';
+@use './trade';
+@use './mediaquerry' as *;
+@use './earn';
+@use './homePrizes';
+@use '_banner.scss';
+@use './darkmode';
 
 body{
+    overflow: overlay;
     width: 100%;
     min-height: 200px;
     display: flex;
@@ -13,6 +25,7 @@ body{
         height: auto;
     }
     main{
+        margin-top: 56px;
         width: 100%;
         height: auto;
         display: flex;
@@ -25,30 +38,38 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            @media screen and (min-width: 1200px){
-                .section-1200{
-                    max-width: 1200px;
-                    width: 100%;
-                    padding: 48px 24px;
-                }
-                .section-968{
-                    max-width: 968px;
-                    width: 100%;
-                    padding: 48px 24px;
-                }
-            }
-            @media screen and (max-width: 967px){
-                .section-1200, .section-968{
-                    width: 100%;
-                    padding: 32px 24px;
-                }
-            }
-            @media screen and (max-width: 570px){
-                .section-1200, .section-968{
-                    width: 100%;
-                    padding: 16px 24px;
-                }
-            }
         }
+    }
+}
+
+.section-footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-1200{
+    max-width: 1200px;
+    width: 100%;
+    padding: 48px 24px;
+}
+.section-968{
+    max-width: 968px;
+    width: 100%;
+    padding: 100px 24px;
+}
+
+@include breakpoint("tablet") {
+    .section-1200, .section-968{
+        width: 100%;
+        padding: 32px 24px;
+    }
+  }
+@include breakpoint("mobile") {
+    .section-1200, .section-968{
+        width: 100%;
+        padding: 16px 24px;
     }
 }

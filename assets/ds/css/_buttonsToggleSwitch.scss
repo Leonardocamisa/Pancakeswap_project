@@ -64,25 +64,7 @@
 
       &.light{
         &.darkmode{
-          input[type="checkbox"]:checked{
-            & + .toggle-switch-container{
-                background-color: $b-ToggleSwitch-darkmode-active;
-                .toggle-slider{
-                    transform: translateX(26px);
-                    right: 3px;
-                    left: 0;
-                    background: url("../img/icons/moon.svg") center no-repeat, $b-ToggleSwitch-dark-ball;
-                    background-size: auto;
-                }
-                .icon-toggle-switch{
-                  svg {
-                    path{
-                      fill: $b-ToggleSwitch-dark-ball;
-                    }
-                  }
-                }
-            }
-          }
+
           .toggle-slider{
             background: url("../img/icons/sun.svg") center no-repeat, $b-ToggleSwitch-dark-ball;
             background-size: auto;
@@ -104,11 +86,37 @@
         }
       }
       &.dark{
+        &.darkmode{
+          input[type="checkbox"]:checked{
+            & + .toggle-switch-container{
+                background-color: $b-ToggleSwitch-darkmode-active;
+                .toggle-slider{
+                    transform: translateX(26px);
+                    right: 3px;
+                    left: 0;
+                    background: url("../img/icons/moon.svg") center no-repeat, $b-ToggleSwitch-dark-ball;
+                    background-size: auto;
+                }
+                .icon-toggle-switch{
+                  svg {
+                    path{
+                      fill: $b-ToggleSwitch-dark-ball;
+                    }
+                  }
+                }
+            }
+          }
+        }
         .toggle-switch-container{
             background-color: $b-ToggleSwitch-dark-bg;
             .toggle-slider{
                 background-color: $b-ToggleSwitch-dark-ball;
             }
+        }
+        &.button-pancake{
+          .toggle-slider{
+            box-shadow: rgb(102, 97, 113) 0px 1.5px 0px 1.5px;
+          }
         }
       }
 
@@ -175,6 +183,14 @@
             }
         }
       }
+      &.dark{
+        &.button-pancake{
+          .toggle-slider{
+            box-shadow: rgb(102, 97, 113) 0px 1.5px 0px 1.5px;
+          }
+        }
+      }
+
       input[type="checkbox"]:focus{
         & + .toggle-switch-container{
           box-shadow: $color-1-light 0px 0px 0px 1px, rgb(118 69 217 / 60%) 0px 0px 0px 4px;
